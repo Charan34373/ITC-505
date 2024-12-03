@@ -3,36 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership Form</title>
-    <link rel="stylesheet" href="web-8.css"> <!-- Link CSS -->
+    <title>Secure Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-container">
-        <h1>Membership Form</h1>
-        <form id="membershipForm">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+    <div class="form-wrapper">
+        <!-- Form Section -->
+        <section id="formSection" class="form-section">
+            <h2>Secure Registration Form</h2>
+            <form id="registrationForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="errorMessages" class="error-messages"></div>
+        </section>
+
+        <!-- Success Message Section -->
+        <section id="successSection" class="success-section hidden">
+            <h2>Success!</h2>
+            <p>Your form has been submitted successfully.</p>
+        </section>
+
+        <!-- Addendum Section -->
+        <section class="addendum-section">
+            <h3>Important Notes</h3>
+            <ul>
+                <li><strong>First Name & Last Name:</strong> Ensure no numbers are entered.</li>
+                <li><strong>Email:</strong> Must follow a valid format (e.g., user@example.com).</li>
+                <li><strong>Password:</strong> Must include at least 8 characters, including uppercase, lowercase, number, and special characters.</li>
+            </ul>
+        </section>
     </div>
-    <script src="web-8.js" defer></script> <!-- Link JS -->
+
+    <script src="script.js"></script>
 </body>
 </html>
