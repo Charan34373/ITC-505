@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="lightsout.css">
+</head>
+<body>
+    <h1>Lights Out</h1>
+    <p>Click the squares to toggle their state and try to turn off all the lights!</p>
+    <div id="game-board"></div>
+    
+    <!-- Addendum Section -->
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>
+            <strong>Process:</strong> To build this game, the primary focus was to implement the game's logic for toggling lights
+            and determining when the player has won. A grid-based approach was used to represent the game board, and CSS grid layout 
+            provided a simple way to display the squares.
+        </p>
+        <p>
+            <strong>Creative Choices:</strong> The design was enhanced using visually appealing colors, a gradient background, and hover effects 
+            to make the game more engaging. The use of smooth transitions and responsive design ensures a better user experience.
+        </p>
+        <p>
+            <strong>Challenges:</strong> The main challenge was ensuring that the initial game board was both random and solvable. This was 
+            achieved by simulating random clicks on the board during initialization. Debugging issues related to winning condition 
+            detection was also a critical part of the process.
+        </p>
+        <p>
+            <strong>Insights:</strong> This project highlighted the importance of clean modular code, especially when separating logic (JavaScript) 
+            from styling (CSS). Additionally, testing the game logic thoroughly was crucial to ensure the game behaved as expected.
+        </p>
+        <p>
+            Overall, this project was a fun and educational way to learn about game development, grid layouts, and interactive web design.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="lightsout.js"></script>
+</body>
+</html>
