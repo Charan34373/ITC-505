@@ -1,0 +1,61 @@
+/* General body styling */
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Fun, playful font */
+    text-align: center;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Slightly darker text for contrast */
+}
+
+/* Game title styling */
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff7a85; /* Subtle shadow for text */
+    margin-top: 20px;
+}
+
+/* Game board container */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px); /* Larger squares for better visibility */
+    gap: 8px;
+    margin: 30px auto;
+    width: fit-content;
+    background-color: #ffffffaa; /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Individual square styling */
+.square {
+    width: 60px;
+    height: 60px;
+    background-color: #76c7c0; /* On (teal) */
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* "Off" state square styling */
+.square.is-off {
+    background-color: #ffeaa7; /* Off (pale yellow) */
+    transform: scale(0.95); /* Slightly smaller effect */
+}
+
+/* Add hover effect for interactivity */
+.square:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 0.9em;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
